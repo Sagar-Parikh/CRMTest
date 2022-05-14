@@ -10,17 +10,15 @@
         <methods>
           <include name="verifyContactsLabelTest"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="selectContactsTest"/>
+          <include name="tearDown"/>
           <include name="validateCreateNewContact"/>
           <include name="selectMultipleContactTest"/>
         </methods>
       </class> <!-- com.crm.qa.tests.ContactsPageTest -->
       <class name="com.crm.qa.tests.LoginPageTest">
         <methods>
-          <include name="loginPageTitleTest"/>
           <include name="tearDown"/>
-          <include name="crmLogoImageTest"/>
           <include name="setUp"/>
           <include name="loginTest"/>
         </methods>
@@ -30,9 +28,9 @@
           <include name="verifyUserNameTest"/>
           <include name="tearDown"/>
           <include name="verifyTasksLink"/>
-          <include name="setUp"/>
-          <include name="verifyContactsLink"/>
           <include name="verifyDealsLink"/>
+          <include name="verifyContactsLink"/>
+          <include name="setUp"/>
           <include name="verifyHomePageTitleTest"/>
         </methods>
       </class> <!-- com.crm.qa.tests.HomePageTest -->

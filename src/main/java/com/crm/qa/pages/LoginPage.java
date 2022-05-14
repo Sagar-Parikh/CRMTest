@@ -49,12 +49,6 @@ public class LoginPage extends TestBase {
 		wait.until(ExpectedConditions.invisibilityOf(preloader));
 		loginLink.click();
 		
-		try {
-			Thread.sleep(3500);
-		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		email.sendKeys(e);
 		password.sendKeys(pwd);
 		loginButton.click();

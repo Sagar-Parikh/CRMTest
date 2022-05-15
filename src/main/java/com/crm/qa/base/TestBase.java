@@ -29,8 +29,7 @@ public class TestBase {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\New folder\\Selenium_Workspace\\CRMTest\\src\\main\\java\\com\\crm\\"
-					+ "qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			prop.load(ip);	
 		}catch(FileNotFoundException e){
 			e.printStackTrace();
@@ -44,15 +43,15 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:\\New folder\\SeleniumJars\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm\\qa\\drivers\\geckodriver.exe");
 			 driver = new FirefoxDriver();
 			
 		}else if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\New folder\\SeleniumJars\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm\\qa\\drivers\\chromedriver.exe");
 			 driver = new ChromeDriver();
 			
 		}else {
-			System.setProperty("webdriver.edge.driver", "C:\\New folder\\SeleniumJars\\msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+"\\src\\main\\java\\com\\crm\\qa\\drivers\\msedgedriver.exe");
 			 driver = new EdgeDriver();	
 		}
 		

@@ -3,6 +3,7 @@
 <suite name="Free CRM Application Test Suite">
 	<listeners>
 		<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
+		<listener class-name="com.crm.qa.analyser.MyTransformer" />
 	</listeners>
 
 	<test name="Free CRM Application Test cases">

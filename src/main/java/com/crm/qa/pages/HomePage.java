@@ -41,7 +41,7 @@ public class HomePage extends TestBase {
 	}
 	
 	public ContactsPage clickOnContactsLink() {
-		contactsLink.click();
+		testUtil.javaScripExecutorClick(contactsLink);
 		return new ContactsPage();
 	}
 	
